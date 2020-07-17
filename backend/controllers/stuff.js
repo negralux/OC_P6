@@ -4,7 +4,7 @@ const fs = require('fs');
 exports.createSauce = (req, res, next) => {
   const sauceObject = JSON.parse(req.body.sauce);
   delete sauceObject._id;
-    sauceObject.likes = 0;  //a l'objet sausse on ajoute like à 0
+    sauceObject.likes = 0;  //a l'objet sauce on ajoute like à 0
     sauceObject.dislikes = 0; //a l'objet sauce on ajoute dislike
     sauceObject.usersLiked = Array(); // déclaration tableau des utilisateur qui aiment
     sauceObject.usersDisliked = Array(); // déclaration tableau des utilisateur qui aiment pas
